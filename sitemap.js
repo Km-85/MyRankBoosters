@@ -1,4 +1,3 @@
-
 const links = [
   { url: '/', changefreq: 'daily', priority: 1.0 },
   { url: '/about', changefreq: 'weekly', priority: 0.8 },
