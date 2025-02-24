@@ -1,0 +1,249 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #cd9ced;  /* Default background */
+}
+
+/* Styling error messages */
+.error-message {
+    color: red;          /* Red color for visibility */
+    font-size: 14px;     /* Larger font size */
+    font-weight: bold;   /* Bold for emphasis */
+    margin-top: 5px;     /* Adds spacing above the message */
+  }
+  
+/* Container for contact form and info */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    /* max-width: 1400px; */
+    padding: 30px;
+    /* gap: 20px; */
+    box-sizing: border-box;
+    position: relative;  /* Ensures the background is behind content */
+}
+
+/* Background Image with Blur */
+.contact-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/contactus.jpeg');  /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: blur(8px);  /* Apply blur to the background */
+    z-index: -1;  /* Place the background image behind the content */
+}
+
+/* Content Area */
+.contact-content {
+    position: relative;  /* Ensure content stays above the background */
+    z-index: 1;  /* Layer content above background */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 50px;
+    background-color: rgba(223, 193, 245, 0.8);  /* Soft overlay */
+    border-radius: 15px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 100%;
+}
+
+/* Left Sidebar - Contact Info */
+.contact-info {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    width: 750px;
+    margin-right: 30px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-info:hover {
+    transform: translateY(-10px);
+}
+
+.contact-info .contact-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.contact-info .contact-description {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.reach-us {
+    margin-top: 30px;
+    text-align: left;
+    height: 300px;
+    width: 650px;
+}
+
+.reach-us h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.reach-us p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Right Sidebar - Contact Form */
+.contact-card {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 750px;
+    margin-top: 10px;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.contact-title {
+    font-size: 28px;
+    color: #3a2961;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #3a2961;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d6c1f5;
+    border-radius: 6px;
+    background-color: #f3e9f4;
+    color: #7e57c2;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #9c71d1;
+    outline: none;
+}
+
+button {
+    background-color: #7e57c2;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: #9c71d1;
+}
+
+button:disabled {
+    background-color: #d6c1f5;
+    cursor: not-allowed;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .contact-info {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .contact-card {
+        width: 100%;
+        max-width: 900px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .contact-info,
+    .contact-card {
+        width: 100%;
+        max-width: 600px;
+    }
+
+   
+        .social-icons {
+          flex-direction: column; /* Stack icons vertically on smaller screens */
+          align-items: center; /* Center icons horizontally */
+        }
+      
+        .social-icon {
+          margin-bottom: 10px; /* Add space between icons on mobile */
+          font-size: 2.5rem; /* Larger icons on mobile */
+        }  
+    
+    
+}

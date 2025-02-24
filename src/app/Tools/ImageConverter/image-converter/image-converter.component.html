@@ -1,0 +1,113 @@
+<div class="container mt-2 header-section">
+  <!-- Heading and Description -->
+  <h1>Ultimate Free Image Converter Tool: Convert JPG, PNG, WebP & All Image Formats with Ease</h1>
+  <p>
+    Are you looking for an easy way to convert your images to various formats like JPG, PNG, WebP, and more? 
+    Our free online image converter tool is here to help! With just a few clicks, you can convert your images to 
+    different formats without losing quality. It's fast, easy, and completely free to use!
+    Whether you're a photographer, a website owner, or simply someone looking to transform images for any purpose, 
+    this image converter is the perfect solution for all your needs.
+  </p>
+</div>
+
+<div class="container">
+  <!-- Image Converter Section -->
+  <h2>Image Converter</h2>
+
+  <!-- File Selection -->
+  <div class="form-group">
+    <label for="imageInput">Upload Image (Format will be auto-detected)</label>
+    <input type="file" class="form-control" id="imageInput" (change)="onImageSelected($event)" multiple />
+    <div *ngIf="errorMessage" class="alert alert-danger mt-2">
+      {{ errorMessage }}
+    </div>
+  </div>
+
+  <!-- Format Selection -->
+  <div class="form-group">
+    <label for="targetFormat">Choose Format To Convert</label>
+    <select class="form-control" id="targetFormat" [(ngModel)]="selectedFormat">
+      <option value="jpeg">JPEG</option>
+      <option value="png">PNG</option>
+      <option value="webp">WEBP</option>
+    </select>
+  </div>
+
+  <!-- Convert Button -->
+  <button class="btn btn-success" (click)="convertImages()" [disabled]="isLoading ">
+    Convert Image
+  </button>
+
+
+  <!-- Spinner for loading -->
+  <div *ngIf="isLoading" class="spinner">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  <!-- Display converted image if available -->
+  <div *ngIf="convertedImage" class="mt-4">
+    <h3>Converted Image</h3>
+    <img [src]="convertedImage" alt="Converted Image" class="img-fluid" />
+    <button (click)="downloadImage()" class="btn btn-primary mt-3 btn-hover-effect">
+      Download Converted Image
+    </button>
+  </div>
+</div>
+
+<!-- Information Section -->
+<div class="container info-section">
+  <h3>Why Use Our Free Online Image Converter?</h3>
+  <ul class="features-list">
+    <li><strong>Supports Multiple Formats:</strong> Convert images between JPG, PNG, WebP, and other formats with ease.</li>
+    <li><strong>High-Quality Output:</strong> Maintain image quality during format conversion, ensuring your images look great.</li>
+    <li><strong>Free and Fast:</strong> Our tool is completely free to use and can quickly convert your images in seconds.</li>
+    <li><strong>Easy-to-Use Interface:</strong> Upload your image, select the desired format, and download the converted file.</li>
+  </ul>
+
+  <h3>Features of Our Free Image Converter Tool</h3>
+  <ul class="features-list">
+    <li>Convert images between JPG, PNG, WebP, and other popular formats.</li>
+    <li>Batch conversion supported—convert multiple images simultaneously.</li>
+    <li>No need for software installation, it works directly in your browser.</li>
+    <li>Completely free with no hidden fees or subscriptions.</li>
+    <li>Simple, fast, and user-friendly interface for seamless image conversion.</li>
+  </ul>
+
+  <h3>How to Convert Images Online</h3>
+  <ol class="steps-list">
+    <li><strong>Upload Your Image:</strong> Select the image file you want to convert by using the file upload button.</li>
+    <li><strong>Choose the Output Format:</strong> Pick the format you want to convert the image into (JPEG, PNG, WebP, etc.).</li>
+    <li><strong>Convert and Download:</strong> Click the convert button, and once it's ready, you can download the converted image.</li>
+  </ol>
+
+  <h3>The Benefits of Using Our Image Converter Tool</h3>
+  <ul class="benefits-list">
+    <li><strong>Faster Image Processing:</strong> Quickly convert your images without the need for time-consuming downloads or uploads.</li>
+    <li><strong>More Storage Space:</strong> Convert large files into more manageable formats to save storage space on your device.</li>
+    <li><strong>Optimized for the Web:</strong> Convert images into web-friendly formats like WebP to speed up website loading times.</li>
+    <li><strong>Share Images Easily:</strong> Convert your images into a format suitable for social media, email, or any other platform.</li>
+  </ul>
+
+  <h3>Why Choose Our Free Online Image Converter?</h3>
+  <ul class="features-list">
+    <li><strong>No Software Installation Required:</strong> Use our tool entirely online, no need to download anything.</li>
+    <li><strong>Free to Use:</strong> Completely free with no hidden costs or sign-ups needed.</li>
+    <li><strong>High-Quality Conversion:</strong> Convert images without losing quality, maintaining clarity and sharpness.</li>
+    <li><strong>Cross-Platform Compatibility:</strong> Works on all devices including desktops, tablets, and smartphones.</li>
+  </ul>
+
+  <h3 class="cta-heading">Start Using Our Image Converter Tool Today!</h3>
+  <p class="cta-text">
+    Convert your images into the format you need with ease. Whether for a project, website, or personal use, our image converter 
+    makes it quick and hassle-free. Start converting your images now and enjoy faster file transfers, optimized storage, and improved 
+    quality for all your images!
+  </p>
+</div>
+
+<!-- Footer Section -->
+<div class="footer">
+  <p>© 2025 Ultimate Image Converter. All rights reserved.</p>
+</div>
+<app-footer></app-footer>

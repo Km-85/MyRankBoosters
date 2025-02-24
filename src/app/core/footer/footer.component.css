@@ -1,0 +1,74 @@
+/* Footer Styling */
+.footer {
+    background-color: #3a2961;
+    color: #ffffff;
+    padding: 50px 0;
+}
+
+.footer h5 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #f9f8f6;
+}
+
+.footer ul {
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer a {
+    color: #d1d1d1;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+.footer i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* Social Media Icons */
+.social-icons {
+    gap: 15px;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    color: #ffffff;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #ffcc00;
+}
+
+/* Divider */
+.footer-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer .row {
+        text-align: center;
+    }
+
+    .footer ul {
+        display: inline-block;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}

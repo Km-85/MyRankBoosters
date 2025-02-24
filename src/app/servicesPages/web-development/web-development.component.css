@@ -1,0 +1,183 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  /* background-color: #f4f7fc; */
+}
+
+.intro-section {
+  background-color: #d8cdf3; /* Light background */
+  padding: 50px 0;
+}
+
+.intro-section h1 {
+  color: #3a2961; /* Deep purple */
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.intro-section .btn {
+  background-color: #3a2961; /* Deep purple */
+  color: white;
+  padding: 12px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.intro-section .btn:hover {
+  background-color: #7e57c2; /* Lighter purple */
+}
+
+/* Services Section */
+.services-section {
+  background-color: #f8e1f0; /* Soft pink */
+  padding: 50px 0;
+}
+
+.services-section h2 {
+  color: #3a2961; /* Deep purple */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.services-section .card {
+  background-color: #fff; /* White background for cards */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Align text to the left */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange content vertically */
+  height: 100%; /* Ensure cards take full height of their container */
+  text-align: center;
+}
+
+.services-section .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  /* No background color change on hover */
+}
+
+.card-icon {
+  font-size: 2rem; /* Or your desired size */
+  color: #3a2961; /* Deep purple for icon color */
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px; /* Space below icon/heading */
+  justify-content: center;
+}
+
+.card-icon i {
+  margin-right: 10px;
+}
+
+.card-icon h5 {
+  margin-bottom: 0; /* Remove default margin from h5 */
+  color: #3a2961; /* Deep purple for heading color */
+  font-weight: bold; /* Make heading bold */
+  justify-content: center;
+}
+
+.card-text {
+  flex-grow: 1; /* Allow text to take up available space */
+  color: #333; /* Darker text color for readability */
+}
+
+/* Why Choose Us Section */
+.why-choose-us{
+  background-color: #e1d3f7;
+}
+.why-choose-us .card {
+  background-color: #eddaeb; /* Light pink */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+.why-choose-us .card:hover {
+  background-color: #ebafe5; /* Soft pink hover effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+/* Card Titles and Icons */
+.card-title {
+  color: #3a2961; /* Deep purple */
+}
+
+.icons {
+  color: #3a2961; /* Deep purple */
+}
+
+/* Contact Info Section */
+.contact-info-section {
+  background-color: #edc3e9; /* Light purple background */
+  color: #3a2961; /* Deep purple text */
+  text-align: center;
+}
+
+.contact-info-section .btn {
+  background-color: #3a2961; /* Deep purple */
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.contact-info-section .btn:hover {
+  background-color: #7e57c2; /* Lighter purple */
+}
+
+/* Feature Cards */
+.feature-card {
+  transition: transform 0.3s ease-in-out;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Web Development Service Cards */
+.web-development-service-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #3a2961; /* Deep purple text */
+}
+
+.web-development-service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .intro-section .col-md-6 {
+      text-align: center;
+  }
+  .contact-info-section .col-md-4 {
+      margin-bottom: 20px;
+  }
+  .cta-section {
+      margin-bottom: 20px;
+  }
+}
+
+.btn-learn-more {
+  display: inline-block;
+  background: linear-gradient(45deg, #3a2961, #7e57c2);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 25px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-learn-more:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(58, 41, 97, 0.3);
+  background: linear-gradient(45deg, #5b3d8c, #9c71d1);
+}
+

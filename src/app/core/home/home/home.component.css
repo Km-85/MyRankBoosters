@@ -1,0 +1,40 @@
+.carousel-indicators {
+    position: absolute; /* Ensure indicators are inside the carousel */
+    bottom: 10px; /* Adjust as needed */
+    margin: 0; /* Remove any extra margin */
+    padding: 0; /* Remove extra padding */
+    list-style: none;
+}
+
+.carousel-indicators button {
+    width: 10px; /* Adjust size */
+    height: 10px;
+    margin: 5px; /* Space between buttons */
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5); /* Light overlay */
+}
+
+.carousel-indicators button.active {
+    background-color: rgba(255, 255, 255, 1); /* Highlight active button */
+}
+
+/* Default Contact Us Section Style for all pages */
+#contact-us-section {
+    background: linear-gradient(135deg, rgba(58, 41, 97, 0.70), rgba(58, 41, 97, 0.35)), url('/assets/contact-us.jpeg') no-repeat center center/cover;
+    padding: 8rem 0; /* Larger padding */
+    color: white;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 350px;
+}
+
+/* Specific styles for Contact Us in Home page */
+body.home-page #contact-us-section {
+    padding: 4rem 0; /* Smaller padding for Home Page */
+    min-height: 50px; /* Smaller height for Home Page */
+}
+

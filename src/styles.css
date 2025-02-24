@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+/* Reduce padding and margins on small devices */
+@media (max-width: 576px) {
+    .container,
+    .container-fluid {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    h2 {
+        margin-bottom: 1rem !important; /* Smaller space below headings */
+    }
+}
+

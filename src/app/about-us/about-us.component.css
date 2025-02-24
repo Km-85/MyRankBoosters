@@ -1,0 +1,301 @@
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #c7c0c7; /* Soft light background */
+  margin: 0;
+  padding: 0;
+  color: #333; /* Darker text for better readability */
+}
+
+
+
+/* About Us Section */
+.about-us-section {
+  background-color: #aaa3a8; /* Clean white background */
+  padding: 6rem 0; /* More padding for a spacious feel */
+}
+
+.about-us-section h2 {
+  color: #3a2961; /* Rich dark color for the heading */
+  font-weight: 700;
+  text-align: center; /* Center the heading */
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.about-us-section p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6; /* Improved line height for readability */
+  text-align: justify; /* Justify text for a neat look */
+  margin-bottom: 1.5rem;
+}
+
+.about-us-section img {
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Service Section */
+.services-section {
+  background-color: #e9f1f4; /* Dark purple background for services section */
+  padding: 6rem 0;
+}
+
+.service-card {
+  background: linear-gradient(145deg, #ffffff, #f0e5ff); /* Soft gradient for the card */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Increased shadow for depth */
+  border-radius: 15px; /* Rounded corners for a modern look */
+  text-align: center;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Smoother transitions */
+}
+
+.service-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  background: linear-gradient(145deg, #f5f0f0, #e0c9f7); /* Lighter gradient on hover */
+}
+
+.service-card i {
+  color: #3a2961; /* Consistent color for icons */
+  font-size: 3rem; /* Larger icons for more emphasis */
+  transition: color 0.3s ease; /* Smooth transition for icon color */
+}
+
+.service-card:hover i {
+  color: #6b057a; /* Change icon color on hover */
+}
+
+.service-card h4 {
+  margin-top: 20px;
+  font-size: 1.5rem; /* Larger heading for better impact */
+  color: #3a2961; /* Dark color for headings */
+  font-weight: bold; /* Bold for a more modern and strong look */
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+  margin-top: 15px; /* Added space between text and bottom */
+}
+
+
+/* Add subtle hover effect for text */
+.service-card:hover p {
+  color: #333; /* Darker text on hover */
+}
+
+
+
+
+/* Why Choose Us Section */
+.why-choose-us {
+  background-color: #f7ecf5; /* Dark purple background for consistency */
+  padding: 6rem 0;
+}
+
+.why-choose-us h2 {
+  color: #3a2961; /* Rich dark color for the heading */
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.why-choose-us p {
+  color: #555; /* Consistent color for text */
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+/* Feature Cards for Why Choose Us */
+.why-choose-us .feature-card {
+  background: linear-gradient(145deg, #d4c5c5, #f0e5ff); /* Soft gradient for feature cards */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Increased shadow for depth */
+  border-radius: 15px; /* Rounded corners */
+  text-align: center;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Smooth transitions */
+}
+
+.why-choose-us .feature-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  background: linear-gradient(145deg, #f5f0f0, #e0c9f7); /* Lighter gradient on hover */
+}
+.why-choose-us .card-body{
+  background-color: #e6dcf0;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Increased shadow for depth */
+  border-radius: 15px; /* Rounded corners for a modern look */
+  text-align: center;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Smoother transitions */
+}
+.why-choose-us .card-body:hover{
+  background-color: #caa4f0;
+  font-size: 3rem; /* Larger icon size for better emphasis */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Increased shadow for depth */
+  border-radius: 15px; /* Rounded corners for a modern look */
+  text-align: center;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Smoother transitions */
+}
+.why-choose-us .feature-card i {
+  color: #3a2961; /* Consistent icon color */
+  font-size: 3rem; /* Larger icon size for better emphasis */
+  transition: color 0.3s ease; /* Smooth transition for icon color */
+}
+
+.why-choose-us .feature-card:hover i {
+  color: #6b057a; /* Change icon color on hover */
+}
+
+.why-choose-us .feature-card h5 {
+  margin-top: 20px;
+  font-size: 1.5rem; /* Larger heading for more impact */
+  color: #3a2961; /* Dark color for headings */
+  font-weight: bold; /* Bold font for emphasis */
+}
+
+.why-choose-us .feature-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+  margin-top: 15px;
+}
+
+/* Add subtle hover effect for text */
+.why-choose-us .feature-card:hover p {
+  color: #333; /* Darker text on hover */
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+  .why-choose-us h2 {
+    font-size: 2rem; /* Adjust heading size for mobile */
+  }
+
+  .why-choose-us p {
+    font-size: 1rem;
+    margin-bottom: 2rem; /* Less margin for smaller screens */
+  }
+
+  .why-choose-us .feature-card {
+    padding: 20px;
+  }
+
+  .why-choose-us .feature-card h5 {
+    font-size: 1.25rem; /* Smaller heading for mobile */
+  }
+
+  .why-choose-us .feature-card i {
+    font-size: 2rem; /* Adjust icon size */
+  }
+  .team-card {
+    margin-bottom: 30px; /* Adds space between team cards */
+  }
+}
+
+
+
+
+/* Call to Action Section */
+.cta-section {
+  background-color: #efcfef; /* Deep purple background */
+  /* color: rgb(13, 9, 9); */
+  padding: 6rem 0; /* More space to emphasize the section */
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-section .btn {
+  /* background-color: #ffffff; */
+  color: #3a2961;
+  border-radius: 25px;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: white;
+}
+
+.cta-section .btn:hover {
+  background-color: #f2effb; /* Lighter shade of purple */
+  color: rgb(243, 239, 244);
+  font-size: 1.2rem;
+}
+
+ .btn {
+  display: inline-block;
+  background: linear-gradient(45deg, #3a2961, #7e57c2);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 20px 55px;
+  border-radius: 25px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-learn-more {
+  display: inline-block;
+  background: linear-gradient(45deg, #3a2961, #7e57c2);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 25px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 5px;
+}
+
+.btn-learn-more:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(58, 41, 97, 0.3);
+  background: linear-gradient(45deg, #5b3d8c, #9c71d1);
+}
+
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-us-section {
+    padding: 4rem 0;
+  }
+
+  .service-card {
+    padding: 20px;
+    margin-bottom:20px;
+  }
+
+  .service-card i {
+    font-size: 2rem;
+  }
+
+  .why-choose-us .feature-card {
+    padding: 2rem;
+  }
+
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+
+  .cta-section p {
+    font-size: 1rem;
+  }
+}

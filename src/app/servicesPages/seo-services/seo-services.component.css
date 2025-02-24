@@ -1,0 +1,260 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  /* background-color: #f4f7fc; Light background */
+}
+
+/* Intro */
+.intro-section {
+  position: relative; /* Necessary for positioning the pseudo-element */
+  padding: 50px 0;
+  overflow: hidden; /* Prevents blurred image from overflowing */
+}
+
+.intro-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/seo-services.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: blur(8px); /* Apply blur only to the pseudo-element */
+  z-index: -1; /* Place the blurred image behind the content */
+}
+
+.intro-section .container {
+  position: relative; /* Needed to bring the content in front */
+  z-index: 1; /* Ensure content is above the blurred image */
+}
+
+/* Optional: Add a semi-transparent overlay for better text readability */
+.intro-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2); /* Adjust opacity as needed */
+  z-index: 0; /* Place overlay on top of the blurred image */
+}
+.intro-section .btn {
+  background-color: rgb(58, 41, 97); /* Deep purple */
+  border-color: rgb(58, 41, 97); /* Deep purple */
+  padding: 12px 30px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.intro-section .btn:hover {
+  color: #fff;
+}
+
+.intro-section p{
+  font-size: medium;
+  color: rgb(8, 1, 8);
+  
+}
+
+.cta-section .btn:hover {
+  background-color: rgb(200, 158, 227); /* Lighter purple */
+}
+
+/* General Styles for SEO Cards */
+
+.seo-optimization-services {
+  /* background-color: #e7e3f4; */
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  justify-content: center; /* Center the cards horizontally */
+  gap: 20px; /* Add some space between the cards */
+}
+
+.service-card {
+  background-color: white;
+  padding: 30px; /* Increased padding */
+  border-radius: 15px; /* More rounded corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: rgb(58, 41, 97);
+  text-align: center;
+  width: calc(33.33% - 20px); /* Set width for 3 cards per row with margin */
+  min-height: 280px; /* Ensure consistent height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.service-card:hover {
+  transform: translateY(-10px); /* Increased hover lift */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Even stronger shadow on hover */
+  background-color: rgb(247, 240, 244);
+}
+
+.card-icon {
+  font-size: 3rem; /* Larger icon size */
+  margin-bottom: 15px;
+  color: rgb(58, 41, 97);
+}
+
+
+.service-card h5 {
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  flex-grow: 1; /* Allow the paragraph to take up available space */
+  margin-bottom: 20px;
+}
+
+.btn-learn-more {
+  display: inline-block;
+  background: linear-gradient(45deg, #3a2961, #7e57c2);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 25px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-learn-more:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(58, 41, 97, 0.3);
+  background: linear-gradient(45deg, #5b3d8c, #9c71d1);
+}
+
+
+/* Why Choose Us Section */
+.why-choose-us {
+  background-color: #f8cef2; /* Light gray */
+  padding: 5rem 0;
+  color: black;
+}
+
+.why-choose-us h2 {
+  color: rgb(58, 41, 97); /* Deep purple */
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.why-choose-us p {
+  
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+
+.feature-card {
+  background-color: rgb(238, 220, 233); /* Light purple */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: rgb(58, 41, 97); /* Deep purple */
+  min-height: 320px;
+}
+
+.why-choose-us .feature-card:hover {
+  background-color: #d6c1f5; /* Lighter purple for hover */
+  color: rgb(58, 41, 97); /* Deep purple text */
+}
+
+.why-choose-us .feature-card i {
+  font-size: 3rem;
+  color: rgb(58, 41, 97); /* Deep purple */
+}
+
+.why-choose-us .feature-card h5 {
+  color: rgb(58, 41, 97); /* Deep purple */
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+/* Call to Action Section */
+.contact-info-section {
+  background-color: rgb(218, 209, 240); /* Light purple background */
+  color: rgb(58, 41, 97); /* Deep purple text */
+  text-align: center;
+}
+
+.contact-info-section .btn {
+  background-color: rgb(58, 41, 97); /* Deep purple */
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.contact-info-section .btn:hover {
+  background-color: #4e3d7c; /* Darker purple */
+}
+
+/* Cards */
+.feature-card {
+  transition: transform 0.3s ease-in-out;
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .intro-section .col-md-6 {
+      text-align: center;
+  }
+  .contact-info-section .col-md-4 {
+      margin-bottom: 20px;
+  }
+  .cta-section {
+      margin-bottom: 20px;
+  }
+
+.card-icon {
+    font-size: 2rem; /* Adjust icon size */
+    margin-right: 15px; /* Add space between icon and text */
+    margin-bottom: 0; /* Remove bottom margin for icon */
+    flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.service-card h5 {
+    margin-bottom: 5px; /* Adjust heading margin */
+}
+
+.service-card p {
+    flex-grow: 1; /* Allow paragraph to take up remaining space */
+    margin-bottom: 10px; /* Adjust paragraph margin */
+}
+
+
+.card-container {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center cards horizontally */
+}
+.service-card {
+  flex-direction: column; /* Stack elements vertically on mobile */
+  align-items: center; /* Center horizontally */
+  text-align: center; /* Center text on mobile */
+  width: 100%;
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-right: 0; /* Remove right margin on mobile */
+  margin-bottom: 10px; /* Add bottom margin on mobile */
+  justify-content: center; /* Center icon */
+}
+
+.btn-learn-more {
+  align-self: center; /* Center the button */
+  margin-top: 10px; /* Add some top margin */
+}
+}

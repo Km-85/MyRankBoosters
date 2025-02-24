@@ -1,0 +1,177 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Intro Section */
+  .intro-section {
+    background-color: #d8cdf3;
+    padding: 50px 0;
+  }
+  
+  .intro-section h1 {
+    color: #3a2961;
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
+  
+  .intro-section .btn {
+    background-color: #3a2961;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .intro-section .btn:hover {
+    background-color: #2d2049;
+  }
+  
+  /* Services Section */
+  .services-section {
+    background-color: #f3e9f4;
+    padding: 50px 0;
+  }
+  
+  .services-section h2 {
+    color: #3a2961;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .services-section .card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: rgb(58, 41, 97);
+  }
+  
+  .services-section .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background-color: #e7e5ee;
+  }
+  
+  .services-section h5 {
+    color: #3a2961;
+    margin-bottom: 10px;
+  }
+
+  /* Target the card icons specifically */
+.card-icon {
+  font-size: 3rem; /* Larger icon size */
+  margin-bottom: 15px;
+  color: rgb(58, 41, 97);
+}
+
+.card-icon i {
+  margin-right: 10px; /* Space between icon and h5 (if needed) */
+  display: inline-block; /* Might be needed for font-based icons and transform */
+}
+
+/* OR, if you have an SVG inside the i tag: */
+.card-icon i svg {
+  width: 3em; /* Or your desired width */
+  height: 3em; /* Or your desired height */
+  display: block; /* Important for centering SVGs */
+  margin: 0 auto; /* Centers the SVG horizontally within the i tag */
+}
+
+.card-icon h5 {
+  margin-bottom: 0; /* Remove default h5 margin */
+}
+
+  .btn-learn-more {
+  display: inline-block;
+  background: linear-gradient(45deg, #3a2961, #7e57c2);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 25px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-learn-more:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(58, 41, 97, 0.3);
+  background: linear-gradient(45deg, #5b3d8c, #9c71d1);
+}
+
+  
+  /* Why Choose Us Section */
+  .why-choose-us {
+    background-color: #d6c1f5;
+    padding: 50px 0;
+  }
+  
+  .why-choose-us h2 {
+    color: #3a2961;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .why-choose-us .card {
+    background-color: #f1eef3;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .why-choose-us .card:hover {
+    transform: translateY(-5px);
+    background-color: #ebafe5;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .why-choose-us .card-title {
+    color: #3a2961;
+  }
+  
+  .why-choose-us .card i {
+    font-size: 3rem;
+    color: #3a2961;
+  }
+  
+  /* Contact Info Section */
+  .contact-info-section {
+    background-color: rgb(244, 232, 242);
+    color: rgb(58, 41, 97);
+  }
+  
+  .contact-info-section .btn {
+    background-color: rgb(58, 41, 97);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .contact-info-section .btn:hover {
+    background-color: #4e3d7c;
+  }
+  
+  .contact-info-section i {
+    font-size: 2rem;
+    color: #3a2961;
+  }
+  
+  .icons {
+    color: rgb(58, 41, 97);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 767px) {
+    .intro-section .col-md-6 {
+      text-align: center;
+    }
+  
+    .contact-info-section .col-md-4 {
+      margin-bottom: 20px;
+    }
+  }
+  

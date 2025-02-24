@@ -1,0 +1,176 @@
+<div class="contact-container">
+  <!-- Contact Info Section -->
+  <div class="contact-info">
+    <h2 class="contact-title">We'd Love to Hear From You!</h2>
+    <p class="contact-description">
+      Please fill out the form below and our team will get back to you shortly.
+    </p>
+
+    <div class="reach-us">
+      <h3>How to Reach Us</h3>
+      <p><strong>Address:</strong> Bengaluru, India</p>
+      <p><strong>Phone:</strong> +91 7978475423</p>
+      <p><strong>Email:</strong> bharadwajanish5@gmail.com</p>
+      <p><strong>Office Hours:</strong> Mon-Fri, 9 AM - 6 PM</p>
+      <!-- Social Media Section -->
+  <!-- <div class="social-media-container text-center mt-5"> -->
+    <p style="font-weight: bold;">Follow Us<p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/yourpage" style="color: white; margin-right: 15px;">
+        <i class="bi bi-facebook" style="font-size: 2rem;"></i>
+      </a>
+      <a href="https://twitter.com/yourprofile" style="color: white; margin-right: 15px;">
+        <i class="bi bi-twitter" style="font-size: 2rem;"></i>
+      </a>
+      <a href="https://www.instagram.com/yourprofile" style="color: white; margin-right: 15px;">
+        <i class="bi bi-instagram" style="font-size: 2rem;"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/yourprofile" style="color: white; margin-right: 15px;">
+        <i class="bi bi-linkedin" style="font-size: 2rem;"></i>
+      </a>
+      <a href="https://www.youtube.com/c/yourchannel" style="color: white;">
+        <i class="bi bi-youtube" style="font-size: 2rem;"></i>
+      </a>
+    <!-- </div> -->
+  </div>
+    </div>
+  </div>
+
+  <!-- Contact Form Section -->
+  <div class="contact-card">
+    <form *ngIf="!successMessage && !errorMessage" (ngSubmit)="submitForm()" #form="ngForm">
+      <!-- Full Name -->
+      <div class="form-group">
+        <label for="name">Full Name*</label>
+        <input
+          type="text"
+          id="name"
+          class="form-control"
+          [(ngModel)]="contactForm.name"
+          name="name"
+          required
+          #nameCtrl="ngModel"
+          placeholder="Enter your full name"
+        />
+        <div *ngIf="nameCtrl.invalid && nameCtrl.touched" class="error-message">
+          <span *ngIf="nameCtrl.errors?.['required']">Name is required.</span>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email Address*</label>
+        <input
+          type="email"
+          id="email"
+          class="form-control"
+          [(ngModel)]="contactForm.email"
+          name="email"
+          required
+          email
+          #emailCtrl="ngModel"
+          placeholder="Enter your email address"
+        />
+        <div *ngIf="emailCtrl.invalid && emailCtrl.touched" class="error-message">
+          <span *ngIf="emailCtrl.errors?.['required']">Email is required.</span>
+          <span *ngIf="emailCtrl.errors?.['email']">Invalid email format.</span>
+        </div>
+      </div>
+
+      <!-- Phone Number -->
+      <div class="form-group">
+        <label for="phone">Phone Number*</label>
+        <input
+          type="tel"
+          id="phone"
+          class="form-control"
+          [(ngModel)]="contactForm.phone"
+          name="phone"
+          required
+          #phoneCtrl="ngModel"
+          placeholder="Enter your phone number"
+        />
+        <div *ngIf="phoneCtrl.invalid && phoneCtrl.touched" class="error-message">
+          <span *ngIf="phoneCtrl.errors?.['required']">Phone number is required.</span>
+          <span *ngIf="phoneCtrl.errors?.['pattern']">Phone number must be 10 digits.</span>
+        </div>
+      </div>
+
+      <!-- Website -->
+      <div class="form-group">
+        <label for="website">Website Url (optional)</label>
+        <input
+          type="text"
+          id="website"
+          class="form-control"
+          [(ngModel)]="contactForm.website"
+          name="website"
+          #websiteCtrl="ngModel"
+          placeholder="Enter your website Url"
+        />
+      </div>
+
+      <!-- Services -->
+      <div class="form-group">
+        <label for="service">Select Services*</label>
+        <select
+          id="service"
+          class="form-control"
+          [(ngModel)]="contactForm.services"
+          name="services"
+          required
+          multiple
+          #serviceCtrl="ngModel"
+        >
+          <option value="SEO Services">SEO Services</option>
+          <option value="Web Development">Web Development</option>
+          <option value="Social Media Marketing">Social Media Marketing</option>
+          <option value="Paid Advertising">Paid Advertising Solutions</option>
+          <option value="Email Marketing">Email Marketing</option>
+          <option value="Content Marketing">Content Marketing</option>
+          <option value="Others">Others</option>
+        </select>
+        <div *ngIf="serviceCtrl.invalid && serviceCtrl.touched" class="error-message">
+          <span *ngIf="serviceCtrl.errors?.['required']">Please select at least one service.</span>
+        </div>
+      </div>
+
+      <!-- Message -->
+      <div class="form-group">
+        <label for="message">Your Message*</label>
+        <textarea
+          id="message"
+          class="form-control"
+          rows="4"
+          [(ngModel)]="contactForm.message"
+          name="message"
+          required
+          #messageCtrl="ngModel"
+          placeholder="Enter your message"
+        ></textarea>
+        <div *ngIf="messageCtrl.invalid && messageCtrl.touched" class="error-message">
+          <span *ngIf="messageCtrl.errors?.['required']">Message is required.</span>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary w-100" [disabled]="form.invalid">Submit</button>
+    </form>
+
+    <!-- Success and Error Messages -->
+    <div *ngIf="successMessage" class="message-container">
+      <div class="alert alert-success">
+        <i class="fas fa-check-circle"></i> {{ successMessage }}
+      </div>
+    </div>
+    <div *ngIf="errorMessage" class="message-container">
+      <div class="alert alert-danger">
+        <i class="fas fa-exclamation-circle"></i> {{ errorMessage }}
+      </div>
+    </div>
+  </div>
+
+  
+</div>
+
+<app-footer></app-footer>

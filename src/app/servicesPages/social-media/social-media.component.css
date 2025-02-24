@@ -1,0 +1,183 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    /* background-color: #f4f7fc; Same light background */
+}
+
+.intro-section {
+    background-color: #d8cdf3;
+    padding: 50px;
+}
+
+.intro-section h1 {
+    color: #3a2961; /* Deep purple */
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.intro-section .btn {
+    background-color: #3a2961; /* Deep purple */
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.intro-section .btn:hover {
+    background-color: #7e57c2; /* Lighter purple */
+}
+
+/* Services Section */
+.services-section {
+    background-color: #f3e9f4; /* Soft pink */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.services-section h2 {
+    color: #3a2961; /* Deep purple */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.social-media-service-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-media-service-card h5 {
+    color: #3a2961; /* Deep purple */
+    margin-bottom: 10px;
+}
+
+.social-media-service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    
+}
+
+/* Target the card icons specifically */
+.card-icon {
+    font-size: 3rem; /* Larger icon size */
+    margin-bottom: 15px;
+    color: rgb(58, 41, 97);
+}
+
+.card-icon i {
+    margin-right: 10px; /* Space between icon and h5 (if needed) */
+    display: inline-block; /* Might be needed for font-based icons and transform */
+}
+
+/* OR, if you have an SVG inside the i tag: */
+.card-icon i svg {
+    width: 3em; /* Or your desired width */
+    height: 3em; /* Or your desired height */
+    display: block; /* Important for centering SVGs */
+    margin: 0 auto; /* Centers the SVG horizontally within the i tag */
+}
+
+.card-icon h5 {
+    margin-bottom: 0; /* Remove default h5 margin */
+}
+
+/* Contact Info Section */
+.contact-info-section {
+    background-color: rgb(218, 209, 240); /* Light purple background */
+    color: rgb(58, 41, 97); /* Deep purple text */
+    text-align: center;
+}
+
+.contact-info-section .btn {
+    background-color: rgb(58, 41, 97); /* Deep purple */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.contact-info-section .btn:hover {
+    background-color: #4e3d7c; /* Slightly lighter deep purple */
+}
+
+/* Social Media Feature Cards */
+.feature-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    .intro-section .col-md-6 {
+        text-align: center;
+    }
+    .contact-info-section .col-md-4 {
+        margin-bottom: 20px;
+    }
+    .cta-section {
+        margin-bottom: 20px;
+    }
+}
+
+/* Social Media Marketing Service Cards */
+.services-section .card {
+    background-color: rgb(214, 200, 242); /* Soft light purple */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: rgb(58, 41, 97); /* Deep purple text */
+}
+
+.services-section .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background-color: #e7e5ee;/* Medium light purple */
+}
+
+/* Why Choose Us Section Cards */
+.why-choose-us .card {
+    background-color: #eddaeb; /* Light pink */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+.why-choose-us .card:hover {
+    background-color: #ebafe5; /* Soft pinkish hover effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+/* Icons */
+.icons {
+    color: rgb(58, 41, 97); /* Deep purple icons */
+}
+
+/* Contact Information Section */
+.contact-info-section ul li {
+    color: rgb(58, 41, 97); /* Deep purple */
+}
+
+.btn-learn-more {
+    display: inline-block;
+    background: linear-gradient(45deg, #3a2961, #7e57c2);
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 25px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .btn-learn-more:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(58, 41, 97, 0.3);
+    background: linear-gradient(45deg, #5b3d8c, #9c71d1);
+  }
+  

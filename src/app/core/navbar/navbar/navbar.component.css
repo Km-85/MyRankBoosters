@@ -1,0 +1,96 @@
+/* Navbar Styling */
+.sticky-navbar {
+    background-color: rgb(58, 41, 97);
+    padding: 10px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Ensure dropdown stays within the viewport */
+.navbar .dropdown-menu {
+    position: absolute;
+    right: auto;  /* Remove right alignment */
+    left: 0; /* Align to the left */
+    min-width: 220px;
+    max-width: 270px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* Special case for the last dropdown (Tools) */
+.navbar .dropdown:last-child .dropdown-menu {
+    right: 0; /* Align this one to the right */
+    left: auto;
+}
+
+
+/* Brand Styling */
+.navbar-brand {
+    color: white;
+    font-family: cursive;
+    font-size: 1.5rem;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #d6c1f5; /* Light Purple Hover Effect */
+}
+
+/* Dropdown Styling */
+.dropdown-menu {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    min-width: 200px;
+}
+
+/* Show dropdown when open */
+.show {
+    display: block !important;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mobile Navbar */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background: rgb(58, 41, 97);
+        margin-top: 10px;
+        border-radius: 8px;
+        padding: 15px;
+    }
+   /* Ensure dropdown stays inside the navbar */
+   .dropdown-menu {
+    position: static !important;
+    width: 100%; /* Makes dropdown take full width */
+    text-align: center;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.dropdown-item {
+    color: white !important;
+    padding: 8px 0;
+}
+
+.dropdown-item:hover {
+    background: transparent;
+    color: #d6c1f5 !important;
+}
+}

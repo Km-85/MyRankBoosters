@@ -1,0 +1,304 @@
+/* General Styles */
+body {
+  background-color: #f3f3f3;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Title and Description */
+.container {
+  margin: 30px auto;
+  padding: 20px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.6;
+  position: relative;
+}
+
+.header-section {
+  width: 100%;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #3a2961;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  line-height: 1.3;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 1200px;
+  animation: fadeInUp 1.5s ease-in-out;
+  font-weight: 400;
+  padding-bottom: 25px;
+}
+
+/* Background Color for Content Sections */
+.container:nth-of-type(odd) {
+  background-color: #f9edf6;
+}
+
+.container:nth-of-type(even) {
+  background-color: #f1eef3;
+}
+
+/* Button Styles */
+button {
+  background-color: #7e57c2;
+  color: white;
+  border: none;
+  padding: 15px 50px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 8px;
+  margin-top: 25px;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:hover {
+  background-color: #9c71d1;
+  transform: scale(1.05);
+}
+
+/* File input styles */
+input[type="file"] {
+  display: block;
+  margin: 30px auto;
+  font-size: 16px;
+  padding: 14px;
+  border-radius: 8px;
+  border: 2px solid #7e57c2;
+  background-color: #fff;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="file"]:hover {
+  border-color: #9c71d1;
+  background-color: #f3effa;
+}
+
+/* Animation for Fade-in */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Image Preview */
+.image-preview {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.image-preview img {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* Image Compressor Section */
+.image-compressor-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  margin-top: 30px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image-compressor-section h2 {
+  font-size: 38px;
+  color: #3a2961;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.file-input {
+  display: block;
+  margin: 30px auto;
+  padding: 14px 22px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #7e57c2;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.compress-btn {
+  background-color: #7e57c2;
+  color: white;
+  padding: 15px 40px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+  margin-top: 20px;
+}
+
+.compress-btn:hover {
+  background-color: #9c71d1;
+  transform: scale(1.05);
+}
+
+/* Information Section */
+.info-section {
+  padding: 30px 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  margin-top: 30px;
+  text-align: left;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  max-width: 1100px;
+  margin: 0 auto 15px;
+}
+
+.sub-heading {
+  font-size: 22px;
+  color: #3a2961;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.features-list, .steps-list, .benefits-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+ 
+}
+
+.features-list li, .steps-list li, .benefits-list li {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.cta-heading {
+  font-size: 22px;
+  color: #7e57c2;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.cta-text {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.8;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 25px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .image-compressor-section h2 {
+    font-size: 30px;
+  }
+
+  .compress-btn, .download-section button {
+    padding: 12px 35px;
+    font-size: 16px;
+  }
+
+  input[type="file"] {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .cta-heading {
+    font-size: 18px;
+  }
+
+  .cta-text {
+    font-size: 16px;
+  }
+}
+
+/* Spinner Styles */
+.spinner {
+  display: none;  /* Initially hidden */
+  border: 4px solid #f3f3f3; /* Light gray */
+  border-top: 4px solid #7e57c2; /* Purple color for spinner */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Download Section */
+.download-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.download-section button {
+  background-color: #4A90E2;
+  padding: 15px 50px;
+  color: white;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.download-section button:hover {
+  background-color: #357ABD;
+  transform: scale(1.05);
+}

@@ -1,0 +1,158 @@
+<div class="container mt-2 header-section">
+  <h1>Ultimate Free Image Compressor Tool: Compress JPG, PNG, WebP & All Images Format with Ease</h1>
+  <p>Are you tired of dealing with large image files slowing down your website or taking up too much storage space? Our
+    free online image compressor tool is here to help! With just a few clicks, you can compress your JPG, PNG, and WebP
+    & all other image formats without losing quality. It's fast, easy, and completely free to use! Whether you're a
+    photographer, a website owner, or simply someone looking to reduce image size for storage or sharing, this image
+    compressor is the perfect solution for all your needs.</p>
+</div>
+
+<div class="container">
+  <h2>Image Compressor</h2>
+
+  <div class="form-group">
+    <label for="imageInput">Upload Image to Compress</label>
+    <input type="file" class="form-control" id="imageInput" (change)="onFileSelected($event)" multiple />
+    <div *ngIf="errorMessage" class="alert alert-danger mt-2">
+      {{ errorMessage }}
+    </div>
+  </div>
+
+
+  <button class="btn btn-success" (click)="convertImages()" [disabled]="isLoading || !selectedFiles.length">
+    Compress Image
+  </button>
+
+  <div *ngIf="isLoading" class="spinner">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  <div *ngIf="convertedImage" class="mt-4">
+    <h3>Compressed Image</h3>
+    <img [src]="convertedImage" alt="Converted Image" class="img-fluid" />
+    <div class="mt-2">
+      <p>Original Size: {{ getOriginalFileSize(0) }}</p>
+      <p>Compressed Size: {{ getCompressedFileSize() }}</p>
+    </div>
+    <button (click)="downloadImage()" class="btn btn-primary mt-3 btn-hover-effect">
+      Download Compressed Image
+    </button>
+  </div>
+
+  <div *ngIf="selectedFiles.length > 1" class="mt-4">
+    <h3>Selected Images</h3>
+    <div *ngFor="let file of selectedFiles">
+      <p>{{ file.name }}</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="container info-section">
+  <h3>Why Use Our Free Online Image Compressor?</h3>
+  <p>
+    Our JPG compressor can quickly reduce the size of your JPG images to make them more manageable. Whether you need to
+    compress JPG to 100KB or want to reduce the size to 50KB, our tool guarantees no loss in image quality. This makes
+    it perfect for website optimization, social media uploads, and email attachments.
+  </p>
+  <p>
+    Need to shrink the size of your PNG images without compromising on quality? Use our online PNG compressor to reduce
+    the size of PNG files in seconds. Whether you're working with large PNG images or need to compress your PNG images
+    to a specific size (like PNG size compressor to 100KB or 50KB), our tool has you covered.
+  </p>
+  <p>
+    WebP is a popular format for web optimization, and our WebP image compressor ensures that your WebP files are
+    compressed efficiently. Reduce the size of WebP images without sacrificing quality—perfect for fast-loading websites
+    and saving storage space.
+  </p>
+
+  <h3>Features of Our Free Image Compressor Tool</h3>
+  <ul class="features-list">
+    <li><strong>Supports Multiple Formats:</strong> Compress JPG, PNG, and WebP & all image formats files in one place.
+    </li>
+    <li><strong>Fast and Easy to Use:</strong> Compress your images online in just a few seconds.</li>
+    <li><strong>No Quality Loss:</strong> Reduce the size of your images without any noticeable loss in quality.</li>
+    <li><strong>Compression to Specific Sizes:</strong> Compress images to sizes like 100KB, 50KB, 20KB, and more.</li>
+    <li><strong>Completely Free:</strong> Use the image compressor online free—no hidden charges or sign-ups required.
+    </li>
+    <li><strong>Perfect for Websites and Social Media:</strong> Speed up your website and ensure quicker image uploads
+      for social media.</li>
+  </ul>
+
+  <h3>How to Compress Images Online</h3>
+  <ol class="steps-list">
+    <li><strong>Upload Your Image:</strong> Upload your image whether it is JPG, PNG, or WebP & any other image format
+      file you want to compress, our systems will auto fetch.</li>
+    <li><strong>Select Compression Settings:</strong> Check your desired output size, like a JPG compressor to 100KB or
+      a PNG compressor to 50 KB.</li>
+    <li><strong>Compress and Download:</strong> Let the tool work its magic! Your image will be compressed and ready for
+      download in seconds.</li>
+  </ol>
+
+  <h3>The Benefits of Compressing Your Images</h3>
+  <ul class="benefits-list">
+    <li><strong>Faster Website Loading Time:</strong> Large image files are often the culprit behind slow-loading
+      websites. By using our image compressor for the web, you can ensure that your images load faster, improving the
+      user experience and potentially boosting your SEO rankings.</li>
+    <li><strong>Save Storage Space:</strong> Whether you’re managing a large archive of images or simply want to free up
+      space on your device, our free image compressor online will help you save valuable storage space by reducing the
+      size of your images.</li>
+    <li><strong>Easier File Sharing:</strong> Smaller image files are easier to upload, send, and share with friends or
+      clients. Need to send a JPG image via email but don’t want to hit the file size limit? Use our online JPG
+      compressor to quickly reduce the file size to 50KB or 100KB.</li>
+  </ul>
+
+  <h3>Why Choose Our Free Image Compressor Online?</h3>
+  <ul class="features-list">
+    <li><strong>No Software Needed:</strong> All you need is an internet connection. Our tool works entirely online.
+    </li>
+    <li><strong>Free for Everyone:</strong> Free image compressor online with no registration or subscription required.
+    </li>
+    <li><strong>High-Quality Output:</strong> We use advanced algorithms to maintain the image's sharpness and detail
+      while reducing the size.</li>
+    <li><strong>Compress JPG, PNG, and WebP Images to Optimal Sizes:</strong> No more struggling with large images that
+      can’t be uploaded or shared easily. Whether you’re working with JPG images, PNG images, WebP images, or any other
+      image file type you can easily control the compression level and reach the ideal file size.</li>
+  </ul>
+
+  <h3 class="cta-heading">Start Using Our Image Compressor Tool Today!</h3>
+  <p class="cta-text">
+    With just a few clicks, you can start compressing your JPG, PNG, and WebP images for free. Don’t let large image
+    files slow you down—optimize your images today with our online image compressor and enjoy faster uploads, quicker
+    load times, and more storage space. Ready to get started? Use our free image compressor online now and experience
+    the magic!
+  </p>
+
+  <h3>Unlock the Power of Image Compression with Our API</h3>
+  <p>
+    Looking for a more seamless way to integrate image compression into your application or website? We’ve got you
+    covered! We offer our own Image Compression API, which allows you to easily incorporate our powerful image
+    compression tool into your platform. With our API for image compression, you can quickly compress JPG, PNG, and WebP
+    images in real time, providing a smooth experience for your users. Whether you're managing a large-scale web
+    application, an e-commerce site, or a photo-sharing platform, our API ensures that your images are optimized for
+    faster loading times without sacrificing quality.
+  </p>
+
+  <h4>Key Features of Our Image Compression API:</h4>
+  <ul class="features-list">
+    <li><strong>Flexible Integration:</strong> Integrate with your website or application in no time.</li>
+    <li><strong>Support for Multiple Formats:</strong> Compress JPG, PNG, and WebP & all other format images with ease.
+    </li>
+    <li><strong>High-Speed Compression:</strong> Enjoy fast, efficient compression for large volumes of images.</li>
+    <li><strong>Quality Preservation:</strong> Maintain the quality of your images even at lower file sizes.</li>
+    <li><strong>Affordable and Scalable:</strong> Our API is priced to fit a variety of business sizes, from small
+      startups to large enterprises.</li>
+  </ul>
+  <p>
+    With our image compressor API, you can automate the process of optimizing images and deliver a better experience to
+    your users without having to worry about performance or quality loss. Take your image optimization to the next
+    level—contact us to learn more about how our image compression API can help streamline your image management needs!
+  </p>
+</div>
+
+<div class="footer">
+  <p>© 2025 Ultimate Image Converter. All rights reserved.</p>
+</div>
+<app-footer></app-footer>

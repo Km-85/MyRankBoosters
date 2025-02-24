@@ -1,0 +1,57 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-navbar">
+    <div class="container-fluid">
+        <!-- Brand -->
+        <a class="navbar-brand" routerLink="/home">GroovStack</a>
+
+        <!-- Hamburger Toggle Button -->
+        <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="" routerLinkActive="active" (click)="closeNavbar()">Home</a>
+               <!-- Services Dropdown -->
+<li class="nav-item dropdown" (click)="toggleDropdown($event, 'servicesDropdown')">
+    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+        aria-expanded="false" (click)="$event.preventDefault()">
+        Services
+    </a>
+    <ul class="dropdown-menu" [ngClass]="{'show': dropdownOpen === 'servicesDropdown'}">
+        <li><a class="dropdown-item" routerLink="/services" (click)="closeNavbar()">All Services</a></li>
+        <li><a class="dropdown-item" routerLink="/services/seo-services" (click)="closeNavbar()">SEO Services</a></li>
+        <li><a class="dropdown-item" routerLink="/services/web-development" (click)="closeNavbar()">Web Development</a></li>
+        <li><a class="dropdown-item" routerLink="/services/social-media-marketing" (click)="closeNavbar()">Social Media Marketing</a></li>
+        <li><a class="dropdown-item" routerLink="/services/ads" (click)="closeNavbar()">Paid Advertising</a></li>
+        <li><a class="dropdown-item" routerLink="/services/email-marketing" (click)="closeNavbar()">Email Marketing</a></li>
+        <li><a class="dropdown-item" routerLink="/services/content-marketing" (click)="closeNavbar()">Content Marketing</a></li>
+    </ul>
+</li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/about-us" routerLinkActive="active" (click)="closeNavbar()">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/contact-us" routerLinkActive="active" (click)="closeNavbar()">Contact Us</a>
+                </li>
+
+               <!-- Tools Dropdown -->
+<li class="nav-item dropdown" (click)="toggleDropdown($event, 'toolsDropdown')">
+                    <a class="nav-link dropdown-toggle" href="#" id="toolsDropdown" role="button"
+                        aria-expanded="false">
+                        Tools
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" [ngClass]="{'show': dropdownOpen === 'toolsDropdown'}">
+                        <li><a class="dropdown-item" routerLink="/tools/image-compressor" (click)="closeNavbar()">Image Compressor</a></li>
+                        <li><a class="dropdown-item" routerLink="/tools/image-converter" (click)="closeNavbar()">Image Converter</a></li>
+                        <li><a class="dropdown-item" routerLink="/tools/thumbnail-downloader" (click)="closeNavbar()">YouTube Thumbnail Downloader</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
