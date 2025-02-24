@@ -6,7 +6,6 @@ const links = [
   { url: '/contact', changefreq: 'monthly', priority: 0.6 },
 ];
 
-
 const stream = new SitemapStream({ hostname: 'https://www.groovstacks.com/' });
 
 streamToPromise(require('stream').Readable.from(links).pipe(stream))
